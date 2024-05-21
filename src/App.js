@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Accordian from './Accordian.js';
 
 function App() {
+  const sections = [
+    {title: 'Section1', content: 'Content of the section1'},
+    {title: 'Section2', content: 'Content of the section2'},
+    {title: 'Section3', content: 'Content of the section3'},
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Accordian Example</h1>
+      <Accordian sections={sections} />
     </div>
   );
 }

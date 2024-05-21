@@ -2,37 +2,46 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.accordian {
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.accordian-section {
+  border-bottom: 1px solid #ddd;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.accordian-title {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: #f9f9f9;
 }
 
-.App-link {
-  color: #61dafb;
+.accordian-arrow {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.accordian-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+}
+
+.accordian-content.active {
+  transition: max-height 0.3s ease-in;
+}
+
+.accordian-content p {
+  padding: 15px;
+  margin: 0;
+}
+
+.accordian-title.active .accordian-arrow {
+  transform: rotate(180deg);
 }
