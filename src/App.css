@@ -1,4 +1,4 @@
-.App {
+.App h1{
   text-align: center;
 }
 
@@ -39,7 +39,7 @@
 
 .accordian-content p {
   padding: 15px;
-  margin: 0;
+  margin-left: 10px;
 }
 
 .accordian-title.active .accordian-arrow {

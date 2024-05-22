@@ -11,8 +11,8 @@ const Accordian = ({sections}) => {
         {sections.map((section, index) => (
             <div key={index} className='accordian-section'>
                 <div className={`accordian-title ${activeIndex === index ? 'active' : ''}`} onClick={() => handleClick(index)}>
-                    <div className='accordian-arrow'>&#9662;</div>
                     {section.title}
+                    <div className='accordian-arrow'>&#9662;</div>
                 </div>
                 <div className={`accordian-content ${activeIndex === index ? 'active' : ''}`} 
                 style={{maxHeight: activeIndex === index ? '200px' : '0'}}>
